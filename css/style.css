@@ -1,0 +1,107 @@
+* {
+  font-family: 'Darker Grotesque', sans-serif;
+  color: white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.layout {
+  background-image: url("../images/bg.png");
+  width:100%;
+  height:100%; 
+  box-sizing:border-box;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout .loading {}
+.layout .wrapper {
+  position: relative;
+  width: calc(100vw - 32px);
+  height: calc(100vh - 32px);
+}
+
+.layout-bg {
+  width: 100%;
+}
+
+.wrapper-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.menu {
+  width: 50%;
+  display: flex;
+}
+
+.menu-item {
+  font-size: 36px;
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.body-content {
+  display: flex;
+  width: 100%;
+}
+
+.body-left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title-p1 {
+  font-family: 'VT323';
+  font-size: 140px;
+  text-transform: uppercase;
+}
+
+.title-p1.p2 {
+  font-family: 'VT323';
+  font-size: 120px;
+  text-transform: uppercase;
+  color: red;
+}
+.body-right {
+  width: 50%;
+}
+
+.abso-1 {
+  font-family: 'VT323';
+  font-size: 18px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 20%;
+  transform: rotate(-90deg);
+  left: 0;
+}
+
+.abso-2 {
+  font-family: 'VT323';
+  font-size: 18px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 25px;
+  right: 70px;
+}
