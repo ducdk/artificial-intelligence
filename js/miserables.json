@@ -1,0 +1,17 @@
+{
+    "nodes": [
+        {"id": "a", "group": 1, "name": "AI"},
+        {"id": "f", "group": 1, "name": "Nguyễn Mạnh Quý"},
+        {"id": "b", "group": 1, "name": "Phùng Việt Thắng"},
+        {"id": "c", "group": 1, "name": "Nguyễn Tử Quảng"},
+        {"id": "d", "group": 1, "name": "Đào Đức Minh"},
+        {"id": "e", "group": 1, "name": "Bùi Hải Hưng"}
+    ],
+    "links": [
+        {"source": "a", "target": "b", "value": 1},
+        {"source": "a", "target": "c", "value": 8},
+        {"source": "a", "target": "d", "value": 10},
+        {"source": "a", "target": "e", "value": 6},
+        {"source": "a", "target": "f", "value": 1}
+    ]
+  }
