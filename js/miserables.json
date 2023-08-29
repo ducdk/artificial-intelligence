@@ -1,11 +1,11 @@
 {
     "nodes": [
-        {"id": "a", "group": 1, "name": "AI"},
-        {"id": "f", "group": 1, "name": "Nguyễn Mạnh Quý"},
-        {"id": "b", "group": 1, "name": "Phùng Việt Thắng"},
-        {"id": "c", "group": 1, "name": "Nguyễn Tử Quảng"},
-        {"id": "d", "group": 1, "name": "Đào Đức Minh"},
-        {"id": "e", "group": 1, "name": "Bùi Hải Hưng"}
+        {"id": "a", "group": 1, "name": "AI", "img": ""},
+        {"id": "f", "group": 1, "name": "Nguyễn Mạnh Quý", "img": "../images/nv/1.png"},
+        {"id": "b", "group": 1, "name": "Phùng Việt Thắng", "img": "../images/nv/2.png"},
+        {"id": "c", "group": 1, "name": "Nguyễn Tử Quảng", "img": "../images/nv/3.png"},
+        {"id": "d", "group": 1, "name": "Đào Đức Minh", "img": "../images/nv/4.png"},
+        {"id": "e", "group": 1, "name": "Bùi Hải Hưng", "img": "../images/nv/5.png"}
     ],
     "links": [
         {"source": "a", "target": "b", "value": 1},

@@ -42,13 +42,24 @@ function initChooseSurvey() {
     });
 }
 
-async function submitSurvey() {
-    // call api
-    const response = await fetch(`${url}?question=${indexQuestion + 1}&value=${itemChoose + 1}&action=post`);
+async function showData() {
+    const response = await fetch(`${url}?question=${indexQuestion + 1}&value=${itemChoose + 1}&action=get`);
     const data = await response.json();
-    console.log(data);
-    // reset
-    itemChoose = 0
+
+    if (data.param) {
+        const listItem = $('.chart-value');
+        const listPer = $('.chart-percent');
+        const total = data.param.reduce((partialSum, a) => partialSum + a, 0);
+        listItem.each((i, element) => {
+            const per = total > 0 ? data.param[i]/total : 0
+            const h = Math.round(per * 300)
+            $(element).css("height", `${h}px`);
+            $(listPer[i]).html(`${Math.round(per * 100)}%`);
+        });
+    }
+}
+
+function resetItemChoose() {
     const listItem = $('.item-choose');
     listItem.each((i, element) => {
         if (0 >= parseInt($(element).attr('data-id'))) {
@@ -57,13 +68,62 @@ async function submitSurvey() {
             $(element).removeClass('active');
         }
     });
-    initQuestion();
 }
+
+async function submitSurvey() {
+    
+    $('#submitSurvey span').hide();
+    $('#submitSurvey .loader').show();
+    // call api
+    const response = await fetch(`${url}?question=${indexQuestion + 1}&value=${itemChoose + 1}&action=post`);
+    const data = await response.json();
+    
+    $('#submitSurvey span').show();
+    $('#submitSurvey .loader').hide();
+    // reset
+    itemChoose = 0
+    resetItemChoose();
+    $('#submitSurvey').hide();
+    $('#nextSurvey').show();
+    showData();
+}
+
+
+function nextSurvey() {
+    resetItemChoose();
+    $('#submitSurvey').show();
+    $('#nextSurvey').hide();
+    initQuestion();
+    showData();
+}
+
+const audio = new Audio('./images/music.mp3');
+console.log(audio)
+
+function initAudio() {
+    $('#play').click(() => {
+        console.log('123213')
+        audio.play()
+        $('#pause').show();
+        $('#play').hide();
+    })
+    $('#pause').click(() => {
+        audio.pause();
+        $('#pause').hide();
+        $('#play').show();
+    })
+}
+
 
 
 function init() {
     initQuestion();
     initChooseSurvey();
+    $('#nextSurvey').hide();
+    $('#submitSurvey .loader').hide();
+    $('#pause').hide();
+    showData();
+    initAudio();
 }
 
 init()

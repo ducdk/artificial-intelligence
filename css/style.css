@@ -20,6 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .layout .loading {}
@@ -138,7 +139,7 @@ body {
 
 .title-p1 {
   font-family: 'VT323';
-  font-size: 150px;
+  font-size: 110px;
   letter-spacing: 0px;
   text-transform: uppercase;
   color: #ffffff;
@@ -256,6 +257,7 @@ body {
   letter-spacing: -2px;
   color: #ffffff;
   font-weight: 600;
+  text-align: center;
 }
 
 .survey {
@@ -346,7 +348,8 @@ body {
 
 .chart-value {
   width: 71px;
-  height: 200px;
+  height: 0px;
+  transition: height 1.5s;
   border-radius: 8px;
   background-image: linear-gradient(180deg, rgba(158,219,53,0.9999999999999999) 0%, rgba(158,219,53,0) 100%);
 }
@@ -502,11 +505,72 @@ body {
   max-width: 50%;
 }
 
-.svg {
+.body-svg {
   position: absolute;
-  top: 100px;
+  top: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.svg-left {
+  flex: 1;
+}
+
+.svg-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.svg-show {
+  margin-bottom: 20px;
+}
+
+.svg-t {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.svg {
+  /* position: absolute;
+  top: 100px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.music {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.music img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

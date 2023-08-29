@@ -50,6 +50,13 @@ d3.json("./js/miserables.json", function (error, graph) {
     node.append("title")
         .text(function (d) { return d.id; });
 
+    node.append("svg:image")
+        .attr("xlink:href", function (d) { return d.img; })
+        .attr("width", 140)
+        .attr("height", 140)
+        .attr("x", -70)
+        .attr("y", -70);
+
     simulation
         .nodes(graph.nodes)
         .on("tick", ticked);

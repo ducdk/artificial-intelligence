@@ -22,6 +22,11 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div class="music">
+            <img id="pause" src="./images/pause.svg" alt="">
+            <img id="play" src="./images/play.svg" alt="">
+        </div>
+
         <div class="layout">
             <div class="loading"></div>
 
@@ -78,32 +83,36 @@
                                 <div class="survey-item" data-aos="fade-up" data-aos-duration="2000"><div data-id="4" class="item-choose"></div></div>
                                 <div class="survey-item" data-aos="fade-up" data-aos-duration="2000"><img src="./images/happy.png" alt=""></div>
                             </div>
-                            <div class="button-survey" data-aos="fade-up" data-aos-duration="2000" onclick="submitSurvey()">Tiếp</div>
+                            <div id="submitSurvey" class="button-survey" data-aos="fade-up" data-aos-duration="2000" onclick="submitSurvey()">
+                                <span>Gửi</span>
+                                <div class="loader"></div>
+                            </div>
+                            <div id="nextSurvey" class="button-survey" data-aos="fade-up" data-aos-duration="2000" onclick="nextSurvey()">Tiếp</div>
                         </div>
                         <div class="body-right">
                             <div class="chart">
                                 <div class="chart-item">
-                                    <div class="chart-percent">50%</div>
+                                    <div class="chart-percent">0%</div>
                                     <div class="chart-value"></div>
                                     <div class="chart-title">Mức 1</div>
                                 </div>
                                 <div class="chart-item">
-                                    <div class="chart-percent">50%</div>
+                                    <div class="chart-percent">0%</div>
                                     <div class="chart-value"></div>
                                     <div class="chart-title">Mức 2</div>
                                 </div>
                                 <div class="chart-item">
-                                    <div class="chart-percent">50%</div>
+                                    <div class="chart-percent">0%</div>
                                     <div class="chart-value"></div>
                                     <div class="chart-title">Mức 3</div>
                                 </div>
                                 <div class="chart-item">
-                                    <div class="chart-percent">50%</div>
+                                    <div class="chart-percent">0%</div>
                                     <div class="chart-value"></div>
                                     <div class="chart-title">Mức 4</div>
                                 </div>
                                 <div class="chart-item">
-                                    <div class="chart-percent">50%</div>
+                                    <div class="chart-percent">0%</div>
                                     <div class="chart-value"></div>
                                     <div class="chart-title">Mức 5</div>
                                 </div>
@@ -230,27 +239,36 @@
                 <div class="wrapper-content wrapper-2">
                     <div class="body-content">
                         <div class="body-title" data-aos="fade-up" data-aos-duration="1000">Câu chuyện</div>
-                        <!-- <div class="story">
-                            <div class="story-item">
-                                <div class="story-item-img"></div>
-                                <div class="story-title">Title câu chuyện</div>
+                        <div class="body-svg">
+                            <div class="svg">
+                                <svg width="700" height="600"></svg>
                             </div>
-                            <div class="story-item">
-                                <div class="story-item-img"></div>
-                                <div class="story-title">Title câu chuyện</div>
+                            <div class="svg-left">
+                                <div class="svg-title">Manh nha từ những năm 2014, Việt Nam đã có gần 10 năm chuẩn bị cho làn sóng trí tuệ nhân tạo, cho cuộc các mạng công nghiệp lần thứ 4. Loạt phỏng vấn là ý kiến của các chuyên gia và những người “thực chiến” đầu tiên của Việt Nam về trí tuệ nhân tạo.</div>
+                                <div class="svg-show">
+                                    <div class="svg-t">Nguyễn Mạnh Quý, Giám đốc Viettel Cyberspace</div>
+                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Trí tuệ nhân tạo là cốt lõi của chuyển đổi số</a>
+                                </div>
+                                <div class="svg-show">
+                                    <div class="svg-t">Phùng Việt Thắng, Giám đốc Kinh doanh, Khối khu vực công và doanh nghiệp lớn, Microsoft Việt Nam</div>
+                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Phát triển trí tuệ nhân tạo có trách nghiệm</a>
+                                </div>
+                                <div class="svg-show">
+                                    <div class="svg-t">Nguyễn Tử Quảng, Tổng Giám đốc BKAV</div>
+                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Việt Nam cần rất nhiều điều kiện để phát triển trí tuệ nhân tạo</a>
+                                </div>
+                                <div class="svg-show">
+                                    <div class="svg-t">Đào Đức Minh, Tổng Giám đốc Công ty Cổ phần VinBigData</div>
+                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Để giải được bài toán dữ liệu Việt phải hiểu được đặc tính của người Việt</a>
+                                </div>
+                                <div class="svg-show">
+                                    <div class="svg-t">Bùi Hải Hưng – Tổng Giám đốc Công ty VinAI</div>
+                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Sự kết hợp tư duy giữa máy móc và con người sẽ tạo ra một giai đoạn rất sôi nổi trong lịch sử loài người</a>
+                                </div>
+
                             </div>
-                            <div class="story-item">
-                                <div class="story-item-img"></div>
-                                <div class="story-title">Title câu chuyện</div>
-                            </div>
-                            <div class="story-item">
-                                <div class="story-item-img"></div>
-                                <div class="story-title">Title câu chuyện</div>
-                            </div>
-                        </div> -->
-                        <div class="svg">
-                            <svg width="1024" height="768"></svg>
                         </div>
+
                     </div>
                     
                 </div>
