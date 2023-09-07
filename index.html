@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="css/font.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,16 +28,16 @@
             <img id="play" src="./images/play.svg" alt="">
         </div>
 
-        <div class="layout">
+        <div class="layout l1">
             <div class="loading"></div>
 
             <div class="wrapper">
-                <img src="./images/box.png" class="layout-bg" alt="" srcset="">
+                <img src="./images/box.png" class="layout-bg l1" alt="" srcset="">
                 <div class="abso-1">Artificial Intelligence</div>
                 <div class="abso-2">E-MAGAZINE/NHÂN DÂN ONLINE</div>
                 <marquee class="abso-3" scrollamount="10">Artificial Intelligence . Trí tuệ nhân tạo . Artificial Intelligence . Trí tuệ nhân tạo . Artificial Intelligence . Trí tuệ nhân tạo</marquee>
 
-                <div class="wrapper-content">
+                <div class="wrapper-content l1">
                     <div class="header">
                         <div class="menu">
                             <div class="menu-item"><a href="#tracnghiem" class="text">Trắc nghiệm</a></div>
@@ -62,18 +63,18 @@
             </div>
         </div>
         
-        <div class="layout" id="tracnghiem">
+        <div class="layout l2" id="tracnghiem">
             <div class="loading"></div>
 
             <div class="wrapper">
                 <img src="./images/box.png" class="layout-bg" alt="" srcset="">
 
-                <div class="wrapper-content wrapper-2">
-                    <div class="body-content">
-                        <div class="body-title" data-aos="fade-up" data-aos-duration="1000">Trắc nghiệm</div>
-                        <div class="body-left">
+                <div class="wrapper-content l2 wrapper-2">
+                    <div class="body-content l2">
+                        <div class="body-title l2" data-aos="fade-up" data-aos-duration="1000">Trắc nghiệm</div>
+                        <div class="body-left l2">
                             <div class="title-survey" data-aos="fade-up" data-aos-duration="1500">Đánh giá mức độ từ 1 - 5</div>
-                            <div id="question-survey" class="question-survey" data-aos="fade-up" data-aos-duration="2000">Bạn hiểu rõ trí tuệ nhân tạo là gì?</div>
+                            <div id="question-survey" class="question-survey l2" data-aos="fade-up" data-aos-duration="2000">Bạn hiểu rõ trí tuệ nhân tạo là gì?</div>
                             <div class="survey">
                                 <div class="survey-item" data-aos="fade-up" data-aos-duration="2000"><img src="./images/sad.png" alt=""></div>
                                 <div class="survey-item" data-aos="fade-up" data-aos-duration="2000"><div data-id="0" class="item-choose active"></div></div>
@@ -89,7 +90,7 @@
                             </div>
                             <div id="nextSurvey" class="button-survey" data-aos="fade-up" data-aos-duration="2000" onclick="nextSurvey()">Tiếp</div>
                         </div>
-                        <div class="body-right">
+                        <div class="body-right l2">
                             <div class="chart">
                                 <div class="chart-item">
                                     <div class="chart-percent">0%</div>
@@ -124,15 +125,15 @@
             </div>
         </div>
 
-        <div class="layout" id="solieu">
+        <div class="layout l3" id="solieu">
             <div class="loading"></div>
 
             <div class="wrapper">
                 <img src="./images/box.png" class="layout-bg" alt="" srcset="">
 
-                <div class="wrapper-content wrapper-2">
-                    <div class="body-content">
-                        <div class="body-title" data-aos="fade-up" data-aos-duration="1000">Số liệu</div>
+                <div class="wrapper-content l3 wrapper-2">
+                    <div class="body-content l3">
+                        <div class="body-title l3" data-aos="fade-up" data-aos-duration="1000">Số liệu</div>
                         <div class="body-left">
                             <div class="wrapper-data" data-aos="fade-up" data-aos-duration="1500">
                                 <div class="title-data">Năm 2022</div>
@@ -236,13 +237,68 @@
             <div class="loading"></div>
 
             <div class="wrapper">
-                <div class="wrapper-content wrapper-2">
-                    <div class="body-content">
-                        <div class="body-title" data-aos="fade-up" data-aos-duration="1000">Câu chuyện</div>
-                        <div class="body-svg">
-                            <div class="svg">
-                                <svg width="700" height="600"></svg>
-                            </div>
+                <div class="wrapper-content wrapper-3">
+                    <div class="body-content l4">
+                        <div class="body-title l4" data-aos="fade-up" data-aos-duration="1000">Câu chuyện</div>
+                        <div class="story">
+                            <div class="svg-title">Manh nha từ những năm 2014, Việt Nam đã có gần 10 năm chuẩn bị cho làn sóng trí tuệ nhân tạo, cho cuộc các mạng công nghiệp lần thứ 4. Loạt phỏng vấn là ý kiến của các chuyên gia và những người “thực chiến” đầu tiên của Việt Nam về trí tuệ nhân tạo.</div>
+                        
+                            <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html" class="story-item">
+                                <div class="story-item-img">
+                                    <img src="./images/nv/1.png" alt="" srcset="">
+                                </div>
+                                <div class="story-title">
+                                    <div class="story-40">Nguyễn Mạnh Quý</div>
+                                    <div class="story-30">Giám đốc Viettel Cyberspace</div>
+                                </div>
+                            </a>
+                            <a href="https://special.nhandan.vn/microsoft-tri-tue-nhan-tao/index.html"  class="story-item">
+                                <div class="story-item-img">
+                                    <img src="./images/nv/2.png" alt="" srcset="">
+                                </div>
+                                <div class="story-title">
+                                    <div class="story-40">Phùng Việt Thắng</div>
+                                    <div class="story-30">Giám đốc Kinh doanh, Khối khu vực công và doanh nghiệp lớn</div>
+                                    <div class="story-30">Microsoft Việt Nam</div>
+                                </div>
+                            </a>
+                            <a href="https://special.nhandan.vn/bkav-tri-tue-nhan-tao/index.html"  class="story-item">
+                                <div class="story-item-img">
+                                    <img src="./images/nv/3.png" alt="" srcset="">
+                                </div>
+                                <div class="story-title">
+                                    <div class="story-40">Nguyễn Tử Quảng</div>
+                                    <div class="story-30">Tổng Giám đốc BKAV</div>
+                                </div>
+                            </a>
+                            <a href="https://special.nhandan.vn/tri-tue-nhan-tao-vin-big-data/index.html"  class="story-item">
+                                <div class="story-item-img">
+                                    <img src="./images/nv/4.png" alt="" srcset="">
+                                </div>
+                                <div class="story-title">
+                                    <div class="story-40">Đào Đức Minh</div>
+                                    <div class="story-30">Tổng Giám đốc Công ty Cổ phần VinBigData</div>
+                                </div>
+                            </a>
+                            <a href="https://special.nhandan.vn/vinai-tri-tue-nhan-tao/index.html" class="story-item">
+                                <div class="story-item-img">
+                                    <img src="./images/nv/5.png" alt="" srcset="">
+                                </div>
+                                <div class="story-title">
+                                    <div class="story-40">Bùi Hải Hưng</div>
+                                    <div class="story-30">Tổng Giám đốc Công ty VinAI</div>
+                                </div>
+                            </a>
+                            <a href="https://special.nhandan.vn/tri-tue-nhan-tao-viet-nam/index.html" class="story-item">
+                                <div class="story-item-img">
+                                    <img src="./images/nv/6.png" alt="" srcset="">
+                                </div>
+                                <div class="story-title">
+                                    <div class="story-40">Trí tuệ nhân tạo Việt Nam</div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="body-svg">
                             <div class="svg-left">
                                 <div class="svg-title">Manh nha từ những năm 2014, Việt Nam đã có gần 10 năm chuẩn bị cho làn sóng trí tuệ nhân tạo, cho cuộc các mạng công nghiệp lần thứ 4. Loạt phỏng vấn là ý kiến của các chuyên gia và những người “thực chiến” đầu tiên của Việt Nam về trí tuệ nhân tạo.</div>
                                 <div class="svg-show">
@@ -267,7 +323,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                     
@@ -281,6 +337,5 @@
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="js/script.js" async defer></script>
-        <script src="js/chart.js" async defer></script>
     </body>
 </html>

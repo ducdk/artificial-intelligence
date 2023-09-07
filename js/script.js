@@ -14,15 +14,12 @@ const question = [
     'Bạn sẽ sử dụng trí tuệ nhân tạo nhiều hơn trong tương lai.?',
     'Bạn tin trí tuệ nhân tạo sẽ tạo ra sự phát triển vượt trội cho Việt Nam.?',
 ];
-let indexQuestion = 0;
+let indexQuestion = 8;
 
 function initQuestion() {
     const q = document.getElementById('question-survey');
     q.innerHTML = question[indexQuestion];
     indexQuestion++;
-    if (indexQuestion >= question.length) {
-        indexQuestion = 0
-    }
 }
 
 let itemChoose = 0;
@@ -43,7 +40,7 @@ function initChooseSurvey() {
 }
 
 async function showData() {
-    const response = await fetch(`${url}?question=${indexQuestion + 1}&value=${itemChoose + 1}&action=get`);
+    const response = await fetch(`${url}?question=${indexQuestion}&value=${itemChoose + 1}&action=get`);
     const data = await response.json();
 
     if (data.param) {
@@ -75,7 +72,7 @@ async function submitSurvey() {
     $('#submitSurvey span').hide();
     $('#submitSurvey .loader').show();
     // call api
-    const response = await fetch(`${url}?question=${indexQuestion + 1}&value=${itemChoose + 1}&action=post`);
+    const response = await fetch(`${url}?question=${indexQuestion}&value=${itemChoose + 1}&action=post`);
     const data = await response.json();
     
     $('#submitSurvey span').show();
@@ -91,10 +88,15 @@ async function submitSurvey() {
 
 function nextSurvey() {
     resetItemChoose();
-    $('#submitSurvey').show();
-    $('#nextSurvey').hide();
-    initQuestion();
-    showData();
+    if (indexQuestion >= question.length) {
+        $('#submitSurvey').hide();
+        $('#nextSurvey').hide();
+    } else {
+        $('#submitSurvey').show();
+        $('#nextSurvey').hide();
+        initQuestion();
+        showData();
+    }
 }
 
 const audio = new Audio('./images/music.mp3');
