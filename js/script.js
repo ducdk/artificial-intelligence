@@ -14,7 +14,7 @@ const question = [
     'Bạn sẽ sử dụng trí tuệ nhân tạo nhiều hơn trong tương lai.?',
     'Bạn tin trí tuệ nhân tạo sẽ tạo ra sự phát triển vượt trội cho Việt Nam.?',
 ];
-let indexQuestion = 8;
+let indexQuestion = 0;
 
 function initQuestion() {
     const q = document.getElementById('question-survey');
@@ -100,7 +100,6 @@ function nextSurvey() {
 }
 
 const audio = new Audio('./images/music.mp3');
-console.log(audio)
 
 function initAudio() {
     $('#play').click(() => {
@@ -129,3 +128,9 @@ function init() {
 }
 
 init()
+
+$(window).on('load', function () {
+    setTimeout(() => {
+        $('.loading').hide();
+    }, 2000)
+})
