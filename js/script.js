@@ -145,14 +145,9 @@ function start() {
     $('#play').click()
     $('.loading').hide();
     $(window).scrollTop(0 + $(window).height());
-    // setTimeout(() => {
-    //     // $('.layout.l1').css("margin-top", 0);
-    //     // $(window).scrollTop(0);
-    // }, 1000)
     loading++;
 
     $(window).on('scroll', function () {
-        console.log('123213')
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop <= $(window).height() && loading > 0) {
             $(window).scrollTop(0 + $(window).height());
