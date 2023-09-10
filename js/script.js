@@ -139,4 +139,16 @@ $(window).on('load', function () {
 function start() {
     $('#play').click()
     $('.loading').hide();
+    $(window).scrollTop(0 + $(window).height());
+    // setTimeout(() => {
+    //     // $('.layout.l1').css("margin-top", 0);
+    //     // $(window).scrollTop(0);
+    // }, 1000)
+
+    $(window).on('scroll', function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop <= $(window).height()) {
+            $(window).scrollTop(0 + $(window).height());
+        }
+    });
 }
