@@ -15,6 +15,7 @@ const question = [
     'Bạn tin trí tuệ nhân tạo sẽ tạo ra sự phát triển vượt trội cho Việt Nam.?',
 ];
 let indexQuestion = 0;
+let loading = 0;
 
 function initQuestion() {
     const q = document.getElementById('question-survey');
@@ -125,6 +126,8 @@ function init() {
     $('#pause').hide();
     showData();
     initAudio();
+    loading = 0;
+    $(window).scrollTop(0);
 }
 
 init()
@@ -133,6 +136,8 @@ $(window).on('load', function () {
     setTimeout(() => {
         $('.ld').hide();
         $('.click').show();
+        $('.loading.click').css('display', 'flex')
+        $(window).scrollTop(0);
     }, 2000)
 })
 
@@ -144,10 +149,12 @@ function start() {
     //     // $('.layout.l1').css("margin-top", 0);
     //     // $(window).scrollTop(0);
     // }, 1000)
+    loading++;
 
     $(window).on('scroll', function () {
+        console.log('123213')
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop <= $(window).height()) {
+        if (scrollTop <= $(window).height() && loading > 0) {
             $(window).scrollTop(0 + $(window).height());
         }
     });
