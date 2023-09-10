@@ -11,6 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -27,6 +28,8 @@
             <div id="loading">
                 <img id="brain" src="./images/Brain.png" alt="">
                 <img id="circle" src="./images/Circle.png" alt="">
+                <span class="ld">Loading ...</span>
+                <span class="click" onclick="start()">Click để bắt đầu</span>
             </div>
         </div>
 
@@ -124,7 +127,7 @@
                                     <div class="chart-title">Mức 5</div>
                                 </div>
                             </div>
-                            <a href="khaosat.html" class="chart-button">Xem toàn bộ dữ liệu khảo sát</a>
+                            <a target="_blank" href="khaosat.html" class="chart-button">Xem toàn bộ dữ liệu khảo sát</a>
                         </div>
                     </div>
                 </div>
@@ -239,7 +242,7 @@
             </div>
         </div>
         
-        <div class="layout" id="cauchuyen">
+        <div class="layout ll" id="cauchuyen">
             
 
             <div class="wrapper">
@@ -249,7 +252,7 @@
                         <div class="story">
                             <div class="svg-title">Manh nha từ những năm 2014, Việt Nam đã có gần 10 năm chuẩn bị cho làn sóng trí tuệ nhân tạo, cho cuộc các mạng công nghiệp lần thứ 4. Loạt phỏng vấn là ý kiến của các chuyên gia và những người “thực chiến” đầu tiên của Việt Nam về trí tuệ nhân tạo.</div>
                         
-                            <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html" class="story-item">
+                            <a target="_blank" href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html" data-aos="fade-up" data-aos-duration="1000" class="story-item">
                                 <div class="story-item-img">
                                     <img src="./images/nv/1.png" alt="" srcset="">
                                 </div>
@@ -258,7 +261,7 @@
                                     <div class="story-30">Giám đốc Viettel Cyberspace</div>
                                 </div>
                             </a>
-                            <a href="https://special.nhandan.vn/microsoft-tri-tue-nhan-tao/index.html"  class="story-item">
+                            <a target="_blank" href="https://special.nhandan.vn/microsoft-tri-tue-nhan-tao/index.html" data-aos="fade-up" data-aos-duration="1000"  class="story-item">
                                 <div class="story-item-img">
                                     <img src="./images/nv/2.png" alt="" srcset="">
                                 </div>
@@ -268,7 +271,7 @@
                                     <div class="story-30">Microsoft Việt Nam</div>
                                 </div>
                             </a>
-                            <a href="https://special.nhandan.vn/bkav-tri-tue-nhan-tao/index.html"  class="story-item">
+                            <a target="_blank" href="https://special.nhandan.vn/bkav-tri-tue-nhan-tao/index.html" data-aos="fade-up" data-aos-duration="1000" class="story-item">
                                 <div class="story-item-img">
                                     <img src="./images/nv/3.png" alt="" srcset="">
                                 </div>
@@ -277,7 +280,7 @@
                                     <div class="story-30">Tổng Giám đốc BKAV</div>
                                 </div>
                             </a>
-                            <a href="https://special.nhandan.vn/tri-tue-nhan-tao-vin-big-data/index.html"  class="story-item">
+                            <a target="_blank" href="https://special.nhandan.vn/tri-tue-nhan-tao-vin-big-data/index.html" data-aos="fade-up" data-aos-duration="1000" class="story-item">
                                 <div class="story-item-img">
                                     <img src="./images/nv/4.png" alt="" srcset="">
                                 </div>
@@ -286,7 +289,7 @@
                                     <div class="story-30">Tổng Giám đốc Công ty Cổ phần VinBigData</div>
                                 </div>
                             </a>
-                            <a href="https://special.nhandan.vn/vinai-tri-tue-nhan-tao/index.html" class="story-item">
+                            <a target="_blank" href="https://special.nhandan.vn/vinai-tri-tue-nhan-tao/index.html" data-aos="fade-up" data-aos-duration="1000" class="story-item">
                                 <div class="story-item-img">
                                     <img src="./images/nv/5.png" alt="" srcset="">
                                 </div>
@@ -295,7 +298,7 @@
                                     <div class="story-30">Tổng Giám đốc Công ty VinAI</div>
                                 </div>
                             </a>
-                            <a href="https://special.nhandan.vn/tri-tue-nhan-tao-viet-nam/index.html" class="story-item">
+                            <a target="_blank" href="https://special.nhandan.vn/tri-tue-nhan-tao-viet-nam/index.html" data-aos="fade-up" data-aos-duration="1000" class="story-item">
                                 <div class="story-item-img">
                                     <img src="./images/nv/6.png" alt="" srcset="">
                                 </div>
@@ -304,38 +307,33 @@
                                 </div>
                             </a>
                         </div>
-                        <!-- <div class="body-svg">
-                            <div class="svg-left">
-                                <div class="svg-title">Manh nha từ những năm 2014, Việt Nam đã có gần 10 năm chuẩn bị cho làn sóng trí tuệ nhân tạo, cho cuộc các mạng công nghiệp lần thứ 4. Loạt phỏng vấn là ý kiến của các chuyên gia và những người “thực chiến” đầu tiên của Việt Nam về trí tuệ nhân tạo.</div>
-                                <div class="svg-show">
-                                    <div class="svg-t">Nguyễn Mạnh Quý, Giám đốc Viettel Cyberspace</div>
-                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Trí tuệ nhân tạo là cốt lõi của chuyển đổi số</a>
-                                </div>
-                                <div class="svg-show">
-                                    <div class="svg-t">Phùng Việt Thắng, Giám đốc Kinh doanh, Khối khu vực công và doanh nghiệp lớn, Microsoft Việt Nam</div>
-                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Phát triển trí tuệ nhân tạo có trách nghiệm</a>
-                                </div>
-                                <div class="svg-show">
-                                    <div class="svg-t">Nguyễn Tử Quảng, Tổng Giám đốc BKAV</div>
-                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Việt Nam cần rất nhiều điều kiện để phát triển trí tuệ nhân tạo</a>
-                                </div>
-                                <div class="svg-show">
-                                    <div class="svg-t">Đào Đức Minh, Tổng Giám đốc Công ty Cổ phần VinBigData</div>
-                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Để giải được bài toán dữ liệu Việt phải hiểu được đặc tính của người Việt</a>
-                                </div>
-                                <div class="svg-show">
-                                    <div class="svg-t">Bùi Hải Hưng – Tổng Giám đốc Công ty VinAI</div>
-                                    <a href="https://special.nhandan.vn/viettel-tri-tue-nhan-tao/index.html">Sự kết hợp tư duy giữa máy móc và con người sẽ tạo ra một giai đoạn rất sôi nổi trong lịch sử loài người</a>
-                                </div>
-
-                            </div>
-                        </div> -->
 
                     </div>
                     
                 </div>
             </div>
+
+            <div class="footer">
+                <div class="ft">
+                    <div class="ft-name">Chỉ đạo sản xuất:</div>
+                    <div class="ft-value">Ngỗ Việt Anh</div>
+                </div>
+                <div class="ft">
+                    <div class="ft-name">Thực hiện:</div>
+                    <div class="ft-value">Thị Uyên</div>
+                </div>
+                <div class="ft">
+                    <div class="ft-name">Lập trình:</div>
+                    <div class="ft-value">Vũ Đức</div>
+                </div>
+                <div class="ft">
+                    <div class="ft-name">Thiết kế:</div>
+                    <div class="ft-value">Tạ Lư</div>
+                </div>
+            </div>
         </div>
+
+
 
         
 

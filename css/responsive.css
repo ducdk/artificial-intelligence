@@ -36,6 +36,11 @@
   .layout.l1 .wrapper{
     min-height: unset;
     width: 96%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .layout.l2 .layout-bg {
     display: none;
@@ -521,7 +526,7 @@
   }
   
   .story-40 {
-    font-size: 40px;
+    font-size: 36px;
   }
   .story-30 {
     font-size: 30px;
@@ -641,10 +646,22 @@
     display: none;
   }
   .abso-2 {
-    bottom: 40px;
+    display: none;
+  }
+  .abso-3 {
+    height: 26px;
+    font-size: 20px;
+    width: 100%;
+    bottom: -15px;
+    position: absolute;
+  }
+
+  .l1 .body-right {
+    width: 70%;
   }
   .title-p1.p2, .title-p1 {
-    font-size: 40px;
+    font-size: 36px;
+    text-align: center;
   }
 
   .title-survey {
@@ -669,7 +686,26 @@
     height: 30px;
   }
 
-  .wrapper-2 .body-right {
+  .l1 .body-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .l1 .body-left {
+    height: unset;
+    margin-top: 43px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .l1 .body-right .image-2 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .body-right.l2, .body-right.l5 {
     zoom: 0.7;
   }
 

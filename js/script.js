@@ -131,6 +131,12 @@ init()
 
 $(window).on('load', function () {
     setTimeout(() => {
-        $('.loading').hide();
+        $('.ld').hide();
+        $('.click').show();
     }, 2000)
 })
+
+function start() {
+    $('#play').click()
+    $('.loading').hide();
+}

@@ -490,10 +490,12 @@ body {
 }
 
 .story-40 {
-  font-size: 40px;
+  font-size: 36px;
+  color: rgba(158,219,53,1);
 }
 .story-30 {
   font-size: 30px;
+  color: rgba(158,219,53,1);
 }
 
 .story-item {
@@ -541,7 +543,8 @@ body {
 .svg-title {
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 20px;    
+  text-align: justify;
 }
 
 .svg-show {
@@ -611,7 +614,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  zoom: 0.3;
+  zoom: 0.5;
+  flex-direction: column;
+}
+
+.click, .ld {
+  color: black;
+  font-size: 40px;
+  cursor: pointer;
 }
 
 #brain {
@@ -700,4 +710,37 @@ body {
 
 .l5 .chart-title {
   color: #494949;
+}
+
+.click {
+  display: none;
+}
+
+.footer {
+  border-top: 1px solid #cc2929;
+  width: 90%;
+    display: flex;
+    align-items: end;
+    flex-flow: column;
+    padding: 24px 0;
+}
+
+.layout.ll, .layout.l5 {
+  flex-direction: column;
+}
+
+.ft {
+  display: flex;
+    gap: 4px;
+}
+
+.ft-name {
+  font-size: 20px;
+  color: #cc2929;
+  font-weight: 500;
+}
+
+.ft-value {
+  font-size: 20px;
+  color: white;
 }
