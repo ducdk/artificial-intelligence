@@ -81,8 +81,11 @@ async function submitSurvey() {
     // reset
     itemChoose = 0
     resetItemChoose();
-    $('#submitSurvey').hide();
-    $('#nextSurvey').show();
+    // $('#submitSurvey').hide();
+    // $('#nextSurvey').show();
+    // showData();
+
+    initQuestion();
     showData();
 }
 
