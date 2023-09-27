@@ -84,9 +84,13 @@ async function submitSurvey() {
     // $('#submitSurvey').hide();
     // $('#nextSurvey').show();
     // showData();
-
-    initQuestion();
-    showData();
+    if (indexQuestion >= question.length) {
+        $('#submitSurvey').hide();
+    } else {
+        $('#submitSurvey').show();
+        initQuestion();
+        showData();
+    }
 }
 
 
